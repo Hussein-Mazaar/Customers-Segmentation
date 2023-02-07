@@ -5,5 +5,5 @@ The notebook focuses on how to perform customer segmentation, using a hands-on a
 
 The dataset has 2000 obervations and 7 features. We applied some techniques to understand data and checked missing values and data types. The final pre-processing technique we applied to the dataset is standardization.
 
-The number of segments is very challenging in K-means algorithm. The easiest way is the elbow method. I did a loop and run the K-Means algorithm from 1 to 11 clusters. Then, we can plot model results for this range of values and select the elbow of the curve as the number of clusters to use.
+The number of segments is very challenging in K-means algorithm. The easiest way is the elbow method. I did a loop and run the K-Means algorithm from 1 to 11 clusters. Then, we can plot model results for this range of values and select the elbow of the curve as the number of clusters to use. The “elbow” of this graph is the point of inflection on the curve, and in this case is at the 4-cluster mark. 
 

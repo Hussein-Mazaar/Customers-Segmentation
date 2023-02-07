@@ -9,4 +9,4 @@ The number of segments is very challenging in K-means algorithm. The easiest way
 
 ![Elbow Method][identifier]
 
-[identifier]:/Customers-Segmentation/blob/main/wcss.jpg
+[identifier]:https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/wcss.jpg

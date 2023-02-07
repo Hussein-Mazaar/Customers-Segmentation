@@ -9,7 +9,7 @@ The number of segments is very challenging in K-means algorithm. The easiest way
 
 ![Elbow Method][identifier]
 
-# Setup
+## Setup
 1. install Python IDE on your device like Anaconda which includes Jupyter Notebook to easily run the code provided and display visualizations at each step. 
 2. Also, make sure to have the following libraries installed — Numpy, Pandas, Matplotlib, Seaborn, Scikit-Learn, Kneed, and Scipy.
 

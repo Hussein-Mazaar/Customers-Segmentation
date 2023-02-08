@@ -61,12 +61,14 @@ Since the ground truth labels are known, it’s possible to use a clustering met
 
 Principal Component Analysis (PCA) is one of many dimensionality reduction techniques. PCA transforms the input data by projecting it into a lower number of dimensions called components. The components capture the variability of the input data through a linear combination of the input data’s features.
 This below figure shows the segments after running K-means algorithm for age and income which is not clear and well separated. 
-<img src="https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/kmeans_f.jpg"  width="300" height="300">
 
+<p align="center">
+<img src="https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/kmeans_f.jpg"  width="400" height="300">
+</p>
 Dimensionality reduction or PCA reduces the number of features in the dataset by either removing or combining them. Dimensionality reduction techniques help to address a problem with machine learning algorithms known as the curse of dimensionality. The below figure shows the segments after running PCA and choosing two components only.
-![kmeans_pcs](https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/kmeans_pca.jpg)
-
-
+<p align="center">
+<img src="https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/kmeans_pca.jpg"  width="400" height="300">
+</p>
 
 
 ## Setup

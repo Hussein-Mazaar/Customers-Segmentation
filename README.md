@@ -32,7 +32,9 @@ Ttwo methods that are commonly used to evaluate the appropriate number of cluste
 - The silhouette coefficient
 
 The number of segments is very challenging in K-means algorithm. The easiest way is the **elbow method**. When you plot SSE as a function of the number of clusters, notice that SSE continues to decrease as you increase k. As more centroids are added, the distance from each point to its closest centroid will decrease. There’s a sweet spot where the SSE curve starts to bend known as the elbow point. The x-value of this point is thought to be a reasonable trade-off between error and number of clusters.  In this code, the elbow might be located at 4: 
-![Elbow Method](https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/SSE.jpg)
+<p align="center">
+<img src="https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/SSE.jpg"  width="400" height="300">
+</p>
 
 Determining the elbow point in the SSE curve isn’t always straightforward. If you’re having trouble choosing the elbow point of the curve, then you could use a Python package, kneed, to identify the elbow point programmatically:
 
@@ -47,8 +49,9 @@ The **silhouette coefficient** is a measure of cluster cohesion and separation. 
 Silhouette coefficient values range between -1 and 1. Larger numbers indicate that samples are closer to their clusters than they are to other clusters.
 
 The silhouette coefficient of this model is 0.267, indicating reasonable cluster separation.
-![Silhouette Method](https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/silhouette.jpg)
-
+<p align="center">
+<img src="https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/silhouette.jpg"  width="400" height="300">
+</p>
 Ultimately, your decision on the number of clusters to use should be guided by a combination of domain knowledge and clustering evaluation metrics.
 
 The elbow method and silhouette coefficient evaluate clustering performance without the use of **ground truth labels**. Ground truth labels categorize data points into groups based on assignment by a human or an existing algorithm. These types of metrics do their best to suggest the correct number of clusters but can be deceiving when used without context.

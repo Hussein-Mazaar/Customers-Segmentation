@@ -27,7 +27,13 @@ Here are the parameters used in this code:
 
 - **max_iter:** sets the number of maximum iterations for each initialization of the k-means algorithm.
 ## Choosing the Appropriate Number of Clusters
-The number of segments is very challenging in K-means algorithm. The easiest way is the elbow method. I did a loop and run the K-Means algorithm from 1 to 11 clusters. Then, we can plot model results for this range of values and select the elbow of the curve as the number of clusters to use. The “elbow” of this graph is the point of inflection on the curve. We appended the inertia score or the Within-Cluster-Sum-of-Squares (WCSS), then plot a graph of inertia vs number of clusters. **WCSS** or inertia is the sum of squares of the distances of each data point in all clusters to their respective centroids.
+Ttwo methods that are commonly used to evaluate the appropriate number of clusters:
+- The elbow method
+- The silhouette coefficient
+
+The number of segments is very challenging in K-means algorithm. The easiest way is the elbow method. When you plot SSE as a function of the number of clusters, notice that SSE continues to decrease as you increase k. As more centroids are added, the distance from each point to its closest centroid will decrease. There’s a sweet spot where the SSE curve starts to bend known as the elbow point. The x-value of this point is thought to be a reasonable trade-off between error and number of clusters. 
+![Elbow Method][identifier]
+
 
 To evaluate the performance of this model, we will use a metric called the silhouette score. This is a coefficient value that ranges from -1 to +1. A higher silhouette score is indicative of a better model.
 ```python
@@ -36,7 +42,7 @@ print(silhouette_score(scaled_features, kmeans.labels_, metric='euclidean'))
 The silhouette coefficient of this model is 0.267, indicating reasonable cluster separation.
 
 
-![Elbow Method][identifier]
+
 
 ## Setup
 1. install Python IDE on your device like Anaconda which includes Jupyter Notebook to easily run the code provided and display visualizations at each step. 

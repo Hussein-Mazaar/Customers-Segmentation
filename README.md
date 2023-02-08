@@ -19,14 +19,14 @@ The quality of the cluster assignments is determined by computing the sum of the
 
 Here are the parameters used in this code:
 
-- **init:** controls the initialization technique. The standard version of the k-means algorithm is implemented by setting init to "random". Setting this to "k-means++" employs an advanced trick to speed up convergence, which you’ll use later.
+- **init:** controls the initialization technique. The standard version of the k-means algorithm is implemented by setting init to "random". Setting this to "k-means++" employs an advanced trick to speed up convergence.
 
 - **n_clusters:** sets k for the clustering step. This is the most important parameter for k-means.
 
--**n_init:** sets the number of initializations to perform. This is important because two runs can converge on different cluster assignments. The default behavior for the scikit-learn algorithm is to perform ten k-means runs and return the results of the one with the lowest SSE.
+- **n_init:** sets the number of initializations to perform. This is important because two runs can converge on different cluster assignments. The default behavior for the scikit-learn algorithm is to perform ten k-means runs and return the results of the one with the lowest SSE.
 
 - **max_iter:** sets the number of maximum iterations for each initialization of the k-means algorithm.
-
+## Choosing the Appropriate Number of Clusters
 The number of segments is very challenging in K-means algorithm. The easiest way is the elbow method. I did a loop and run the K-Means algorithm from 1 to 11 clusters. Then, we can plot model results for this range of values and select the elbow of the curve as the number of clusters to use. The “elbow” of this graph is the point of inflection on the curve. We appended the inertia score or the Within-Cluster-Sum-of-Squares (WCSS), then plot a graph of inertia vs number of clusters. **WCSS** or inertia is the sum of squares of the distances of each data point in all clusters to their respective centroids.
 
 To evaluate the performance of this model, we will use a metric called the silhouette score. This is a coefficient value that ranges from -1 to +1. A higher silhouette score is indicative of a better model.

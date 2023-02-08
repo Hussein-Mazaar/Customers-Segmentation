@@ -31,12 +31,21 @@ Ttwo methods that are commonly used to evaluate the appropriate number of cluste
 - The elbow method
 - The silhouette coefficient
 
-The number of segments is very challenging in K-means algorithm. The easiest way is the elbow method. When you plot SSE as a function of the number of clusters, notice that SSE continues to decrease as you increase k. As more centroids are added, the distance from each point to its closest centroid will decrease. There’s a sweet spot where the SSE curve starts to bend known as the elbow point. The x-value of this point is thought to be a reasonable trade-off between error and number of clusters.  In this code, the elbow might be located at 4: 
+The number of segments is very challenging in K-means algorithm. The easiest way is the **elbow method**. When you plot SSE as a function of the number of clusters, notice that SSE continues to decrease as you increase k. As more centroids are added, the distance from each point to its closest centroid will decrease. There’s a sweet spot where the SSE curve starts to bend known as the elbow point. The x-value of this point is thought to be a reasonable trade-off between error and number of clusters.  In this code, the elbow might be located at 4: 
 ![Elbow Method][identifier]
 
 Determining the elbow point in the SSE curve isn’t always straightforward. If you’re having trouble choosing the elbow point of the curve, then you could use a Python package, kneed, to identify the elbow point programmatically:
 
-To evaluate the performance of this model, we will use a metric called the silhouette score. This is a coefficient value that ranges from -1 to +1. A higher silhouette score is indicative of a better model.
+```python
+from kneed import KneeLocator
+kl = KneeLocator( range(1, 11), wcss, curve="convex", direction="decreasing")
+kl.elbow
+```
+The **silhouette coefficient** is a measure of cluster cohesion and separation. It quantifies how well a data point fits into its assigned cluster based on two factors:
+- How close the data point is to other points in the cluster
+- How far away the data point is from points in other clusters
+Silhouette coefficient values range between -1 and 1. Larger numbers indicate that samples are closer to their clusters than they are to other clusters.
+
 ```python
 print(silhouette_score(scaled_features, kmeans.labels_, metric='euclidean'))
 ```

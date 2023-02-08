@@ -32,7 +32,7 @@ Ttwo methods that are commonly used to evaluate the appropriate number of cluste
 - The silhouette coefficient
 
 The number of segments is very challenging in K-means algorithm. The easiest way is the **elbow method**. When you plot SSE as a function of the number of clusters, notice that SSE continues to decrease as you increase k. As more centroids are added, the distance from each point to its closest centroid will decrease. There’s a sweet spot where the SSE curve starts to bend known as the elbow point. The x-value of this point is thought to be a reasonable trade-off between error and number of clusters.  In this code, the elbow might be located at 4: 
-![Elbow Method][identifier]
+![Elbow Method][SSE]
 
 Determining the elbow point in the SSE curve isn’t always straightforward. If you’re having trouble choosing the elbow point of the curve, then you could use a Python package, kneed, to identify the elbow point programmatically:
 
@@ -50,7 +50,7 @@ Silhouette coefficient values range between -1 and 1. Larger numbers indicate th
 print(silhouette_score(scaled_features, kmeans.labels_, metric='euclidean'))
 ```
 The silhouette coefficient of this model is 0.267, indicating reasonable cluster separation.
-
+![Silhouette Method][silhouette]
 
 Ultimately, your decision on the number of clusters to use should be guided by a combination of domain knowledge and clustering evaluation metrics.
 
@@ -59,4 +59,5 @@ Ultimately, your decision on the number of clusters to use should be guided by a
 1. install Python IDE on your device like Anaconda which includes Jupyter Notebook to easily run the code provided and display visualizations at each step. 
 2. Also, make sure to have the following libraries installed — Numpy, Pandas, Matplotlib, Seaborn, Scikit-Learn, Kneed, and Scipy.
 
-[identifier]:https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/wcss.jpg
+[SSE]:[https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/SSE.jpg]
+[silhouette]:[https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/silhouette.jpg]

@@ -52,6 +52,7 @@ print(silhouette_score(scaled_features, kmeans.labels_, metric='euclidean'))
 The silhouette coefficient of this model is 0.267, indicating reasonable cluster separation.
 
 
+Ultimately, your decision on the number of clusters to use should be guided by a combination of domain knowledge and clustering evaluation metrics.
 
 
 ## Setup

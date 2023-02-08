@@ -33,7 +33,7 @@ Ttwo methods that are commonly used to evaluate the appropriate number of cluste
 
 The number of segments is very challenging in K-means algorithm. The easiest way is the **elbow method**. When you plot SSE as a function of the number of clusters, notice that SSE continues to decrease as you increase k. As more centroids are added, the distance from each point to its closest centroid will decrease. There’s a sweet spot where the SSE curve starts to bend known as the elbow point. The x-value of this point is thought to be a reasonable trade-off between error and number of clusters.  In this code, the elbow might be located at 4: 
 <p align="center">
-<img src="https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/SSE.jpg"  width="400" height="300">
+<img src="https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/Figures/SSE.jpg"  width="400" height="300">
 </p>
 
 Determining the elbow point in the SSE curve isn’t always straightforward. If you’re having trouble choosing the elbow point of the curve, then you could use a Python package, kneed, to identify the elbow point programmatically:
@@ -50,7 +50,7 @@ Silhouette coefficient values range between -1 and 1. Larger numbers indicate th
 
 The silhouette coefficient of this model is 0.267, indicating reasonable cluster separation.
 <p align="center">
-<img src="https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/silhouette.jpg"  width="400" height="300">
+<img src="https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/Figures/silhouette.jpg"  width="400" height="300">
 </p>
 Ultimately, your decision on the number of clusters to use should be guided by a combination of domain knowledge and clustering evaluation metrics.
 
@@ -66,11 +66,11 @@ Principal Component Analysis (PCA) is one of many dimensionality reduction techn
 This below figure shows the segments after running K-means algorithm for age and income which is not clear and well separated. 
 
 <p align="center">
-<img src="https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/kmeans_f.jpg"  width="400" height="300">
+<img src="https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/Figures/kmeans_f.jpg"  width="400" height="300">
 </p>
 Dimensionality reduction or PCA reduces the number of features in the dataset by either removing or combining them. Dimensionality reduction techniques help to address a problem with machine learning algorithms known as the curse of dimensionality. The below figure shows the segments after running PCA and choosing two components only.
 <p align="center">
-<img src="https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/kmeans_pca.jpg"  width="400" height="300">
+<img src="https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/Figures/kmeans_pca.jpg"  width="400" height="300">
 </p>
 
 

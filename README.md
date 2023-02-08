@@ -46,18 +46,19 @@ The **silhouette coefficient** is a measure of cluster cohesion and separation. 
 - How far away the data point is from points in other clusters
 Silhouette coefficient values range between -1 and 1. Larger numbers indicate that samples are closer to their clusters than they are to other clusters.
 
-```python
-print(silhouette_score(scaled_features, kmeans.labels_, metric='euclidean'))
-```
 The silhouette coefficient of this model is 0.267, indicating reasonable cluster separation.
 ![Silhouette Method](https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/silhouette.jpg)
 
 Ultimately, your decision on the number of clusters to use should be guided by a combination of domain knowledge and clustering evaluation metrics.
+
+The elbow method and silhouette coefficient evaluate clustering performance without the use of **ground truth labels**. Ground truth labels categorize data points into groups based on assignment by a human or an existing algorithm. These types of metrics do their best to suggest the correct number of clusters but can be deceiving when used without context.
+
+**Note: In practice, it’s rare to encounter datasets that have ground truth labels.**
+
 
 
 ## Setup
 1. install Python IDE on your device like Anaconda which includes Jupyter Notebook to easily run the code provided and display visualizations at each step. 
 2. Also, make sure to have the following libraries installed — Numpy, Pandas, Matplotlib, Seaborn, Scikit-Learn, Kneed, and Scipy.
 
-[SSE]:[https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/SSE.jpg]
-[silhouette]:[https://github.com/Hussein-Mazaar/Customers-Segmentation/blob/main/silhouette.jpg]
+
